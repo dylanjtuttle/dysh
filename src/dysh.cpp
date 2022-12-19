@@ -34,13 +34,10 @@ int shell_loop() {
 
     std::cout << "Enter commands to run them or \"exit\" to quit the shell\n";
 
-    // Initialize the shell input indicator (name-of-cwd> )
-    std::string input_indicator;
-
     // Enter shell loop
     while (true) {
-        // Initialize the shell input indicator (name-of-cwd> )
-        input_indicator = get_current_dir_name() + "> ";
+        // Set the shell input indicator (name-of-cwd> )
+        std::string input_indicator = get_current_dir_name() + "> ";
         auto line = prompt.input(input_indicator);
         const auto value = line.value();
 
